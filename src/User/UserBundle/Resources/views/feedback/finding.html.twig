@@ -1,0 +1,36 @@
+        <div>
+             <div style="box-shadow:#000 ;font-family: 'Patua One',sans-serif;background-color: #ace600; text-align: left; color: #000;font-size: 17px;"  id="map">
+                 <br>    <form method="POST">
+                       IdProjet <input id="usr" type="text" name="s" style="border-radius: 25px"/>
+   {#password <input type="text" name="m" />#}
+    <input id="setValue" class="btn" type="submit" value="Search" />
+ 
+
+</form>
+    
+        <hr>
+
+
+    {% for m in ms %}
+        <div style="color: #000;alignment-adjust: baseline">
+           
+           Id Feedback  {{ m.idfeedback }} <br><br>
+         Id Project  {{ m.idproject}} <br><br>
+             User  {{ m.iduser }} <br><br>
+       
+            Text  {{ m.Text }} <br>
+           
+        
+        </div>
+        <br>
+    </div>
+      <a href="{{ path('User_homepagingfeedup', {'id': m.idfeedback } )}}"> Modify </a>
+        
+            <a href="{{ path('User_homepagingfeeddel', {'id': m.idfeedback } )}}"> Delete </a>
+      {% endfor %}
+        
+      
+      
+    
+            </div>
+   

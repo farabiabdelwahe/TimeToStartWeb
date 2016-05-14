@@ -1,0 +1,23 @@
+project_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ProjectBundle:Default:index }
+    
+    
+add:
+    path:    /add
+    defaults: { _controller: TimeToStartProjectBundle:Project:add }
+search:
+    path:    /search
+    defaults: { _controller: TimeToStartProjectBundle:Project:search}
+update:
+    path:    /update
+    defaults: { _controller: TimeToStartProjectBundle:Project:update}
+file_file_homepage:
+    pattern:  /upload
+    defaults: { _controller: TimeToStartProjectBundle:Upload:upload }
+index:
+    pattern:  /index
+    defaults: { _controller: TimeToStartProjectBundle:Project:index}
+    
+    
+    

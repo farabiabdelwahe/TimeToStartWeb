@@ -1,0 +1,15 @@
+
+                        
+                            <div style="text-align: center ;background-color:#959595  ; border-radius: 10px; text-align: left; color: red;font-size: 17px;"  id="map">
+
+<a  class='btn' style="font-size: x-large; color:#468847 ">   Send Email </a> 
+<hr>
+<p>{{form_errors(form)}}</p>
+<hr>
+<form  class='btn' style="text-align: center;margin-left: 550px" role="form" id="fr" method="POST" action='{{path('my_app_mail_sendpage')}}' > 
+    {{form_widget(form) }}
+<script>
+alert("INFOOO2" + localStorage.getItem('testObject')); 
+</script>
+</form>
+        </div>

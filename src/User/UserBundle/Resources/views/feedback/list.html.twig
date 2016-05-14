@@ -1,0 +1,30 @@
+   <div class='btn' style="box-shadow:#000 ;font-family: 'Patua One',sans-serif;background-color: #ace600; text-align: left; color: #000;font-size: 17px;"  id="map">
+                    <form>
+                    {% for m in ms %}
+      
+           
+        
+     
+               <u>  FeedBack's ID:</u> {{ m.idfeedback}}
+             <br>
+        
+                   <u>  Project's Id  : </u>  {{ m.idproject }}
+             <br>
+             Date       {{ m.Date|date("m/d/Y") }}<br>
+             <u>  Text  : </u>  {{ m.Text }}
+             <br>
+                <u>   User's Id  :</u>   {{ m.iduser }}
+              <br>
+                <u>   Banned  :</u>   {{ m.ban }}
+              <br>
+            <a href="{{ path('User_homepagingfeedup', {'id': m.idfeedback } )}}"> Modify </a>
+        
+            <a href="{{ path('User_homepagingfeeddel', {'id': m.idfeedback } )}}"> Delete </a>
+           
+            <br>
+
+            <br>
+      
+      {% endfor %}
+                    </form>
+   </div>

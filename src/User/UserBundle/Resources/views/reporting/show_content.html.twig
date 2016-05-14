@@ -1,0 +1,19 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block show %}
+    <div class="span9">
+        <div style="font-size: x-large">  <u> <h1>Account Information : </h1></u></div>
+        
+        <div style="alignment-adjust: left" id="collapseOne" class="accordion-body collapse in">
+          
+            <div class="accordion-inner">
+                <div class="well">
+                    <p style="color: black;font-size: xx-large">{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+                    <p style="color: black;font-size: xx-large">{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+                    <br><a   style="color: #313131" class="btn" href="{{ path('fos_user_change_password') }}">CAHNGE PASSWORD</a>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+{% endblock show %}

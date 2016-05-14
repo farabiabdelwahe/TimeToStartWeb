@@ -1,0 +1,84 @@
+{% extends "FOSUserBundle:User:Affichage.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+     {% block search %} 
+        <div>
+             <div style="box-shadow:#000 ;font-family: 'Patua One',sans-serif;background-color: #ace600; text-align: left; color: #000;font-size: 17px;"  id="map">
+                 <br>    <form method="post">
+                        Username <input id="usr" type="text" name="s" style="border-radius: 25px"/>
+   {#password <input type="text" name="m" />#}
+    <input id="setValue" class="btn" type="submit" value="Search" />
+ 
+
+</form>
+    
+        <hr>
+
+
+    {% for m in ms %}
+        <div style="color: #000;alignment-adjust: baseline">
+           
+            User's ID  {{ m.id }} <br><br>
+        
+             Username  {{ m.username }} <br><br>
+       
+              The User's Email  {{ m.email }} <br>
+           
+         <input  style="display: none" id="theValue" type="text" name="s"  value="{{ m.email  }}"/>
+        </div>
+        <br>
+    </div>
+      <!--
+    <script>
+ localStorage.clear();
+    (function() {
+   
+  // Use an input to show the current value and let
+  // the user set a new one
+  
+  var input = document.getElementById("theValue");
+    
+  // Reading the value, which was store as "theValue"
+  if (localStorage && 'theValue' in localStorage) {
+    input.value = localStorage.theValue;
+  }
+
+  document.getElementById("setValue").onclick = function () {
+    // Writing the value
+    localStorage && (localStorage.theValue = input.value); 
+  };
+  
+    alert("Welcome again " + input.value); 
+    
+   function foo() {
+    // do something
+
+
+    // call to static variable
+  
+}
+var testObject = input.value ;
+
+// Put the object into storage
+localStorage.setItem('testObject', JSON.stringify(testObject));
+
+// Retrieve the object from storage
+var retrievedObject = localStorage.getItem('testObject');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));
+ alert("INFOOO " + retrievedObject); 
+ 
+// initialize value of static variable
+foo.staticVar = input.value;
+
+foo(); // alert 'some value'
+})();
+</script>
+      -->
+      {% endfor %}
+        
+      <a class="btn" href="{{ path('my_app_mail_form')}}"> Contact Him</a>
+      
+    
+            </div>
+      {% endblock search %}      

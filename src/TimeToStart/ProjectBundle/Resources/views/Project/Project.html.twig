@@ -1,0 +1,318 @@
+{# empty Twig template #}
+{% extends "TimeToStartProjectBundle:Project:Layout.html.twig" %}
+
+{% block CreateProject %}
+{{ form_start(f) }}
+<table class="someclass" border="0" cellpadding="0" cellspacing="0" summary="bla bla bla">
+<tr>
+    <td>
+        {{ form_label (f.type) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.type) }}
+        
+    </td>
+    
+</tr>
+
+<tr>
+    <td>
+        {{ form_label (f.name) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.name ,      { 'class': 'inputp search-query span12' }) }}
+        
+    </td>
+    
+</tr>
+
+<tr>
+    <td>
+        {{ form_label (f.description) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.description) }}
+        
+    </td>
+    
+</tr>
+<tr>
+    <td>
+        {{ form_label (f.helptype) }}
+        
+    </td>
+    
+
+    <td>
+      {{ form_widget(f.helptype, { 'id': 'helptype' } ) }}
+        
+    </td>
+    
+</tr>
+
+<tr>
+    <td>
+        {{ form_label (f.filelink) }}
+        
+    </td>
+    
+    <td>
+          <div class="upload_html inline">
+                    
+      {{ form_widget(f.filelink) }}
+                    </div>
+
+        
+    </td>
+    
+    <tr>
+    <td>
+        {{ form_label (f.imagelink) }}
+        
+    </td>
+    
+    <td>
+          <div class="upload_img inline">
+                    
+      {{ form_widget(f.imagelink) }}
+                    </div>
+
+        
+    </td>
+    
+</tr>
+    
+</tr>
+
+
+<tr class="one">
+    <td>
+        {{ form_label (f.tdiscription) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.tdiscription) }}
+        
+    </td>
+    
+</tr>
+
+<tr class="two">
+    
+ 
+    <td >
+        {{ form_label (f.target) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.target) }}
+        
+    </td>
+</tr>
+    
+    <tr class="two">
+    <td >
+        {{ form_label (f.prize) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.prize) }}
+        
+    </td>
+        </tr>
+        <tr class="three">
+    <td>
+        {{ form_label (f.htask) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.htask) }}
+        
+    </td>
+    
+</tr>
+    <tr class="three">
+    <td >
+        {{ form_label (f.taskdate) }}
+        
+    </td>
+    
+    <td>
+        {{ form_widget(f.taskdate) }}
+        
+    </td>
+    
+</tr>
+
+    
+    <tr>
+    <td>
+        {{ form_label (f.valider) }}
+        
+    </td>
+   
+    <td>
+         <span class="nobacgr_whit"> 
+             <span class="butt_small">
+        {{ form_widget(f.valider ,      { 'class': 'btn btn-large search-query' }) }}
+  </span>
+         </span>
+    </td>
+    
+</tr>
+    
+</table>
+               {{ form_end(f) }}
+     
+
+        
+               <style>
+ button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+                   </style>
+            
+
+ 
+     
+     {% endblock %}
+     
+     
+     {% block UserProjects %}
+         {% for m in v %}
+         
+    <div class="portfolio-listing creative development block" style="display: block;">
+         
+         <div class="span4 bordered" style="display: block; border-style: solid;
+    border-width: 5px; border-color: #aaff00"  >
+             <div class="folder"><u><h2 class="text-center title"><a href="{{ path('index', {'id': m.idproject}) }}">   {{ m.name}} </a></h2></u></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    
+                                    <td class=""><a class="" href= " {{ path('update', {'id': m.idproject}) }}" title=""><img src=  "{{asset('img/edit-icon-1901.png')}}" alt=""></a></td>
+                                    <td class=""><a href=""><img src="{{asset('img/icon_lock.png')}}"  alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="{{ path('index', {'id': m.idproject}) }}"><div class="author_proj proj_3" style="  background-image: url({{ m.imagelink }});background-size: contain"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project" value="132" class="slider"></div>
+                        </div>
+                        <p class="descr">  {{ m.description|length > 200 ? m.description|slice(0, 200) ~ '...' : m.description}}</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project8">{{ m.target}}</span></strong>
+                                <p> Traget</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>{{ m.HelpType}}</strong>
+                                <p>Help Type</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>{{ m.datecreation|date('Y-m-d')}}</strong>
+                                <p>CreationDate</p>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+                                
+                                                                          <script> 
+        
+        $( document ).ready(function() {
+         
+                var rows = $('table.someclass tr');
+                             if ( $('#helptype').val()==="Human Resources"){
+  rows.filter('.one').hide(1000);
+              rows.filter('.two').hide(1000);
+               rows.filter('.three').show(1000);
+}
+
+  
+ else if ( $('#helptype').val()==="Technical"){
+            rows.filter('.one').show(1000);
+              rows.filter('.two').hide(1000);
+               rows.filter('.three').hide(1000);
+
+}
+ else if ( $('#helptype').val()==="Financial"){
+
+ rows.filter('.one').hide(1000);
+         rows.filter('.two').show(1000);
+           rows.filter('.three').hide(1000);
+}
+             
+
+               
+               $('#helptype').bind("DOMSubtreeModified",function(){
+                   
+                   if (this.value==="Human Resources"){
+  rows.filter('.one').hide(1000);
+              rows.filter('.two').hide(1000);
+               rows.filter('.three').show(1000);
+}
+
+  
+ else if (this.value==="Technical"){
+            rows.filter('.one').show(1000);
+              rows.filter('.two').hide(1000);
+               rows.filter('.three').hide(1000);
+
+}
+ else if (this.value==="Financial"){
+
+ rows.filter('.one').hide(1000);
+         rows.filter('.two').show(1000);
+           rows.filter('.three').hide(1000);
+}
+});
+
+
+});
+</script>
+                                
+                                   {% endfor %}
+         
+         
+              {% endblock %}
+              
+              
+     
+     
+     
+         

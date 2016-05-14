@@ -1,0 +1,103 @@
+user_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: UserUserBundle:User:index }
+
+user_user_homepage_aj:
+    path:     /aj
+    defaults: { _controller: UserUserBundle:User:ajouter }
+
+user_user_searching:
+    path:     /sea
+    defaults: { _controller: UserUserBundle:User:search }
+
+admin_user_searching:
+    path:     /seaadmin
+    defaults: { _controller: UserUserBundle:User:searchAdmin }    
+    
+user_user_update:
+    path:     /up
+    defaults: { _controller: UserUserBundle:User:update }   
+    
+    
+user_user_list:
+    path:     /li
+    defaults: { _controller: UserUserBundle:User:lister }     
+    
+my_app_mail_succ:
+    path: /succ
+    defaults: { _controller: UserUserBundle:Mail:index }
+
+my_app_mail_form:
+    path: /mail
+    defaults: { _controller: UserUserBundle:Mail:new }
+
+my_app_mail_sendpage:
+    path: /profile/Affichage
+    defaults: { _controller: UserUserBundle:Mail:sendMail }
+
+my_app_mail_homepage:
+    path:     /h
+    defaults: { _controller: UserUserBundle:Mail:index }
+    
+my_app_mail_homepagees:
+    path:     /try
+    defaults: { _controller: UserUserBundle:User:main }
+    
+my_aapp_mail_homepaging:
+    path:     /Affichage
+    defaults: { _controller: TimeToStartProjectBundle:Project:add  }
+    
+my_aapp_mail_homepaging2:
+    path:    /profile/Affichage
+    defaults: { _controller: UserUserBundle:User:logged }
+    
+user_user_register:
+    path:     /register
+    defaults: { _controller: UserUserBundle:User:ajouter }
+   
+    
+user_user_profilereporting:
+    path:     /rep
+    defaults: { _controller: UserUserBundle:report:lister }
+
+user_user_reportupdate:
+    path:     /rep/up
+    defaults: { _controller: UserUserBundle:report:updating }
+    
+user_user_reportearching:
+    path:     /se
+    defaults: { _controller: UserUserBundle:report:search }
+    
+user_user_reportedel:
+    path:     /de
+    defaults: { _controller: UserUserBundle:report:delete }    
+ 
+    
+user_user_profile:
+    path:     /profile
+    defaults: { _controller: UserUserBundle:User:prof }
+    
+
+Admin_homepaging:
+    path:     /AffichageAdmin
+    defaults: { _controller: UserUserBundle:User:loggedAdmin }
+
+User_homepagingfeed:
+    path:     /lst
+    defaults: { _controller: UserUserBundle:feedback:lister }
+    
+User_homepagingfeedup:
+    path:     /updat
+    defaults: { _controller: UserUserBundle:feedback:updating }
+    
+User_homepagingfeeddel:
+    path:     /dal
+    defaults: { _controller: UserUserBundle:feedback:delete }
+    
+User_homepagingfeedsearch:
+    path:     /sss
+    defaults: { _controller: UserUserBundle:feedback:search }
+    
+User_homepagingfeedadd:
+    path:     /ad
+    defaults: { _controller: UserUserBundle:feedback:add }

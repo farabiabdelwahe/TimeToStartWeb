@@ -1,0 +1,49 @@
+<table border="2">
+    <tr>
+        <th>
+            IdUser
+        </th>
+        
+         <th>
+            Username
+        </th>
+        
+         <th>
+            Email
+        </th>
+        
+       
+        
+          
+         <th>
+            modifier
+        </th>
+        
+    </tr>
+    
+    {% for m in ms %}
+        
+      <tr>
+         <td>
+            {{ m.id }}
+         </td>
+         
+         <td>
+            {{ m.username }}
+         </td>
+         
+          <td>
+            {{ m.email }}
+         </td>
+         
+        
+             <td>
+            <a href="{{ path('user_user_update', {'iduser': m.id } )}}"> modifier </a>
+         </td>
+        
+         
+      </tr>
+      
+      {% endfor %}
+      
+      </table>
