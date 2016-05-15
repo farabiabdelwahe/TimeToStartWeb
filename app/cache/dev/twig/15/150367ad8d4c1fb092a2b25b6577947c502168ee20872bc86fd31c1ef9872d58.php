@@ -34,32 +34,34 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <meta name=\"author\" content=\"\">
 
+
+<link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">
+  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js\"></script>
+  <script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,200,300' rel='stylesheet' type='text/css'>
-    
-   
         <link href=\"";
-        // line 20
+        // line 22
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bootstrap.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     
   
     <link href=\"";
-        // line 23
+        // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     
     <link href=\"";
-        // line 25
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/jquery-ui.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 26
+        // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/resp.css"), "html", null, true);
         echo "\"  rel=\"stylesheet\">
     <link href=\"";
-        // line 27
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/colorbox.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
@@ -94,7 +96,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
     <![endif]-->
 
     <script src= \"";
-        // line 59
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -114,6 +116,46 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
 </head>
 
 <body>
+    
+<nav class=\"navbar navbar-inverse\" >
+  <div class=\"container-fluid\">
+    <div class=\"navbar-header\">
+      <!--  <a class=\"navbar-brand\" style=\"color: #d6e9c6; font-family: monospace\" href=\"#\">";
+        // line 83
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logged_in_as", array("%username%" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array())), "FOSUserBundle"), "html", null, true);
+        echo "</a>-->
+    </div>
+    <ul class=\"nav navbar-nav\" >
+     
+     <!-- <li class=\"dropdown\"><a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">Page 1 <span class=\"caret\"></span></a>
+        <ul class=\"dropdown-menu\">
+          <li><a style=\"color:#9be11f\" href=\"#\">Page 1-1</a></li>
+          <li><a style=\"color:#9be11f\" href=\"#\">Page 1-2</a></li>
+          <li><a style=\"color:#9be11f\" href=\"#\">Page 1-3</a></li>
+        </ul>
+      </li>-->
+      <li><a style=\"color:#9be11f\" href=\"";
+        // line 94
+        echo $this->env->getExtension('routing')->getPath("fos_user_profile_show");
+        echo "\">Profile</a></li>
+      <li><a style=\"color:#9be11f\"   href=\"";
+        // line 95
+        echo $this->env->getExtension('routing')->getPath("fos_user_profile_edit");
+        echo "\">Edit Profile</a></li>
+        <li><a style=\"color:#9be11f\"   href=\"";
+        // line 96
+        echo $this->env->getExtension('routing')->getPath("user_user_searching");
+        echo "\">Search For Users</a></li>
+    </ul>
+    <ul class=\"nav navbar-nav navbar-right\">
+      <li><a style=\"color:#9be11f\" href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>
+      <li><a style=\"color:#9be11f\" href=\"";
+        // line 100
+        echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+        echo "\"><span class=\"glyphicon glyphicon-log-in\"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
     
 <div id=\"header\" class=\"header\">
     <a name=\"id_home\"></a>
@@ -142,27 +184,27 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                 <li class=\"bleft inline\">
                     <ul style=\"margin-left: 10px\">
                         <li><a href=\"https://www.facebook.com/\" target=\"_blank\"  original-title=\"twitter\"><img src= \"";
-        // line 104
+        // line 131
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_face.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                         <li><a href=\"https://plus.google.com/\" target=\"_blank\"  original-title=\"googleplus\"><img src=\"";
-        // line 105
+        // line 132
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_g.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                         <li><a href=\"https://twitter.com/\" title=\"facebook\" target=\"_blank\" ><img src= \"";
-        // line 106
+        // line 133
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_tw.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                         <li><a href=\"http://www.linkedin.com/\" target=\"_blank\" original-title=\"linkedin\"><img src= \"";
-        // line 107
+        // line 134
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_in.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                         <li><a href=\"johndoe%40domainname.html\" target=\"_self\" original-title=\"mail\"><img src=\"";
-        // line 108
+        // line 135
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_p.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                         <li><a href=\"johndoe%40domainname.html\" target=\"_self\" original-title=\"mail\"><img src= \"";
-        // line 109
+        // line 136
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_header_ball.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     </ul>
@@ -234,7 +276,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
             <div class=\"search_top\">
                 <div class=\"search\" id=\"searchh\">
                      <form method=\"post\" action=\"";
-        // line 178
+        // line 205
         echo $this->env->getExtension('routing')->getPath("search");
         echo "\">
                     <span class=\"white\"><strong>Find a project:</strong></span>
@@ -268,14 +310,14 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                                 <tbody>
                                 <tr>
                                     <td class=\"icos_proj_sm bleft\"><a class=\"group1\" href= \"";
-        // line 209
+        // line 236
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/proj1.jpg"), "html", null, true);
         echo "\" title=\"\"><img src= \"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_search.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                     
                                     <td class=\"icos_proj_sm bleft\"><a href=\"projects.html#proj7\"><img src= \"";
-        // line 211
+        // line 238
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_lock.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                       </tr>
@@ -313,13 +355,13 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                                 <tbody>
                                 <tr> 
                                     <td class=\"icos_proj_sm bleft\"><a class=\"group1\" href= \"";
-        // line 246
+        // line 273
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/proj3.jpg"), "html", null, true);
         echo "\" title=\"\"><img src= \"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_search.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                     <td class=\"icos_proj_sm bleft\"><a href=\"projects.html#proj9\"><img src=\"";
-        // line 247
+        // line 274
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_lock.png"), "html", null, true);
         echo "\"  alt=\"\"></a></td>
                                 </tr>
@@ -358,13 +400,13 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                                 <tbody>
                                 <tr>
                                     <td class=\"icos_proj_sm bleft\"><a class=\"group1\" href= \"";
-        // line 283
+        // line 310
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/proj4.jpg"), "html", null, true);
         echo "\" title=\"\"><img src= \"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_search.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                     <td class=\"icos_proj_sm bleft\"><a href=\"projects.html#proj10\"><img src= \"";
-        // line 284
+        // line 311
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_lock.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                 </tr>
@@ -401,13 +443,13 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                                 <tbody>
                                 <tr>
                                     <td class=\"icos_proj_sm bleft\"><a class=\"group1\" href= \"";
-        // line 318
+        // line 345
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/proj5.jpg"), "html", null, true);
         echo "\" title=\"\"><img src= \"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_search.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                     <td class=\"icos_proj_sm bleft\"><a href=\"projects.html#proj11\" ><img src= \"";
-        // line 319
+        // line 346
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_lock.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                 </tr>
@@ -444,13 +486,13 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                                 <tbody>
                                 <tr>
                                     <td class=\"icos_proj_sm bleft\"><a class=\"group1\" href=  \"";
-        // line 353
+        // line 380
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/proj6.jpg"), "html", null, true);
         echo "\" title=\"\"><img src= \"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_search.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                     <td class=\"icos_proj_sm bleft\"><a href=\"projects.html#proj12\"><img src= \"";
-        // line 354
+        // line 381
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_lock.png"), "html", null, true);
         echo "\" alt=\"\"></a></td>
                                 </tr>
@@ -502,9 +544,9 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                     <div id=\"home-page-featured\">
                         
                         ";
-        // line 403
+        // line 430
         $this->displayBlock('ProjectSearch', $context, $blocks);
-        // line 462
+        // line 489
         echo "                    </div>
                 </div>
                             
@@ -525,35 +567,35 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
             <div class=\"span4\">
                 <div class=\"folder_bordered\">
                     <div class=\"folder\"><a href=\"#\"><img src=\"";
-        // line 481
+        // line 508
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder1.png"), "html", null, true);
         echo "\" alt=\"\"></a></div>
                     <div class=\"folder\"><h3 class=\"nomarg text-center\">Step 1:</h3></div>
                     <div class=\"folder\"><p class=\"green text-center\"><strong>Choose a project</strong></p></div>
                 </div>
                 <div class=\"folder\"><img src=\"";
-        // line 485
+        // line 512
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder_n.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             </div>
             <div class=\"span4\">
                 <div class=\"folder_bordered\">
                     <div class=\"folder\"><a href=\"#\"><img src=\"";
-        // line 489
+        // line 516
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder2.png"), "html", null, true);
         echo "\" alt=\"\"></a></div>
                     <div class=\"folder\"><h3 class=\"nomarg text-center\">Step 2:</h3></div>
                     <div class=\"folder\"><p class=\"green text-center\"><strong>Back a project</strong></p></div>
                 </div>
                 <div class=\"folder\"><img src=\"";
-        // line 493
+        // line 520
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder_n.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             </div>
             <div class=\"span4\">
                 <div class=\"folder_bordered\">
                     <div class=\"folder\"><a href=\"#\"><img src=\"";
-        // line 497
+        // line 524
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder3.png"), "html", null, true);
         echo "\" alt=\"\"></a></div>
                     <div class=\"folder\"><h3 class=\"nomarg text-center\">Step 3:</h3></div> <a name=\"id3\"></a>
@@ -561,7 +603,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
 
                 </div>
                 <div class=\"folder\"><img src=\"";
-        // line 502
+        // line 529
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/folder_n.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             </div>
@@ -585,9 +627,9 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                 <div class=\"portfolio-container\">
 
               ";
-        // line 523
+        // line 550
         $this->displayBlock('UserProjects', $context, $blocks);
-        // line 525
+        // line 552
         echo " 
 
 
@@ -620,9 +662,9 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
 <h1 class=\"decoration text-center proj\"><span class=\"nobacgr\">Create Your Project</span></h1>
 <div class=\"create_projects\">
 ";
-        // line 556
+        // line 583
         $this->displayBlock('CreateProject', $context, $blocks);
-        // line 558
+        // line 585
         echo " 
 </div>
 
@@ -655,7 +697,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
         <h4>Address Details:</h4>
         <div class=\"cont\">
             <div class=\"inline-table \"><img src= \"";
-        // line 589
+        // line 616
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_street.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             <div class=\"inline-table mleft10\">
@@ -664,7 +706,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
             </div>
             <div class=\"clear clrbot\"></div>
             <div class=\"inline-table\"><img src=\"";
-        // line 595
+        // line 622
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_phone.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             <div class=\"inline-table mleft10\">
@@ -673,7 +715,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
             </div>
             <div class=\"clear clrbot\"></div>
             <div class=\"inline-table\"><img src=\"";
-        // line 601
+        // line 628
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/icon_email.png"), "html", null, true);
         echo "\" alt=\"\"></div>
             <div class=\"inline-table mleft10\">
@@ -715,31 +757,31 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
         <h5 class=\"decoration text-center\"><span class=\"nobacgr_whit\">OUR PARTNERS</span></h5>
         <div class=\"partn_pics\">
                     <a href=\"http://themeforest.net/\" class=\"partner\"><img src=\"";
-        // line 640
+        // line 667
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_1.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                     <a href=\"http://activeden.net/\" class=\"partner\"><img src=\"";
-        // line 641
+        // line 668
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_2.png"), "html", null, true);
         echo "\" alt=\"\" ></a>
                     <a href=\"http://audiojungle.net/\" class=\"partner\"><img src=\"";
-        // line 642
+        // line 669
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_3.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                     <a href=\"http://graphicriver.net/\" class=\"partner\"><img src=\"";
-        // line 643
+        // line 670
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_4.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                     <a href=\"http://codecanyon.net/\" class=\"partner\"><img src=\"";
-        // line 644
+        // line 671
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_5.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                     <a href=\"http://3docean.net/\" class=\"partner\"><img src= \"";
-        // line 645
+        // line 672
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_6.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                     <a href=\"http://videohive.net/\" class=\"partner\"><img src=\"";
-        // line 646
+        // line 673
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/partn_7.png"), "html", null, true);
         echo "\" alt=\"\"></a>
          </div>
@@ -759,7 +801,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                 <h4>Recent Tweets</h4>
                 <div class=\"tmargin20\">
                     <img class=\"fleft tw\" src=\"";
-        // line 663
+        // line 690
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social_tweet.png"), "html", null, true);
         echo "\" alt=\"\">
                     <div class=\"mleft40\">
@@ -771,7 +813,7 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
                     </div>
                     <div class=\"clear foot\"></div>
                     <img class=\"fleft tw\" src=\"";
-        // line 672
+        // line 699
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social_tweet.png"), "html", null, true);
         echo "\" alt=\"\">
                     <div class=\" mleft40\">
@@ -823,27 +865,27 @@ class __TwigTemplate_ec18bec6f99e6dfb39ab649a66355dde1912ede0f53f72aba18aff1f97f
               <div class=\"fright\">
                 <ul id=\"social_b\" class=\"socialbott inline\">
                     <li><a href=\"https://twitter.com/\" target=\"_blank\" original-title=\"twitter\"><img src=\"";
-        // line 721
+        // line 748
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_face.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     <li><a href=\"https://plus.google.com/\" target=\"_blank\" original-title=\"googleplus\"><img src=\"";
-        // line 722
+        // line 749
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_g.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     <li><a href=\"https://www.facebook.com/\" title=\"facebook\" target=\"_blank\"><img src=\"";
-        // line 723
+        // line 750
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_tw.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     <li><a href=\"http://www.linkedin.com/\" target=\"_blank\" original-title=\"linkedin\"><img src=\"";
-        // line 724
+        // line 751
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_in.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     <li><a href=\"http://www.linkedin.com/\" target=\"_self\" original-title=\"mail\"><img src=\"";
-        // line 725
+        // line 752
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_p.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                     <li><a href=\"http://www.linkedin.com/\" target=\"_self\" original-title=\"mail\"><img src=\"";
-        // line 726
+        // line 753
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/social/icon_footer_ball.png"), "html", null, true);
         echo "\" alt=\"\"></a></li>
                 </ul>
@@ -1078,43 +1120,43 @@ if (this.value===\"Financial\"){
 </script>
 
 <script src= \"";
-        // line 958
+        // line 985
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.selectbox.min.js"), "html", null, true);
         echo "\"></script>
 <script src= \"";
-        // line 959
+        // line 986
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 960
+        // line 987
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 961
+        // line 988
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery-uii.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 962
+        // line 989
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/contact.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 963
+        // line 990
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.colorbox.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 964
+        // line 991
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.placeholder.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 965
+        // line 992
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.tweet.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 966
+        // line 993
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jflickrfeed.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 967
+        // line 994
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/scripts.js"), "html", null, true);
         echo "\"></script>
 
@@ -1186,10 +1228,10 @@ if (this.value===\"Financial\"){
                     ";
     }
 
-    // line 403
+    // line 430
     public function block_ProjectSearch($context, array $blocks = array())
     {
-        // line 404
+        // line 431
         echo "                        
                         <div id=\"Textus\">
                         <div class=\"clear\">
@@ -1201,141 +1243,48 @@ if (this.value===\"Financial\"){
                         </div>
                         <ul>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 414
+        // line 441
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/01.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 415
+        // line 442
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/02.jpg"), "html", null, true);
         echo "\"  class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 416
+        // line 443
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/03.jpg"), "html", null, true);
         echo "\"  class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 417
+        // line 444
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/04.jpg"), "html", null, true);
         echo "\"  class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 418
+        // line 445
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/05.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 419
+        // line 446
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/06.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 420
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/07.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 421
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/08.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 422
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/09.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 423
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/10.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 424
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/12.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 425
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/13.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 426
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/14.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                        </ul>
-                        <ul>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 429
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/14.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 430
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/15.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 431
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/16.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 432
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/17.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 433
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/18.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 434
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/19.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 435
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/20.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 436
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/21.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 437
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/22.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 438
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/23.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 439
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/01.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 440
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/02.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 441
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/03.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-
-                        </ul>
-                        <ul>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 445
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/16.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 446
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/07.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 447
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/08.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/07.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 448
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/10.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/08.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 449
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/11.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/09.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 450
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/02.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/10.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 451
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/03.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/12.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 452
@@ -1345,20 +1294,113 @@ if (this.value===\"Financial\"){
         // line 453
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/14.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 454
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/15.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
-                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
-        // line 455
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/17.jpg"), "html", null, true);
-        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                        </ul>
+                        <ul>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 456
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/18.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/14.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
                             <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
         // line 457
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/15.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 458
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/16.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 459
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/17.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 460
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/18.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 461
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/19.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 462
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/20.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 463
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/21.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 464
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/22.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 465
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/23.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 466
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/01.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 467
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/02.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 468
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/03.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+
+                        </ul>
+                        <ul>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 472
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/16.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 473
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/07.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 474
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/08.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 475
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/10.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 476
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/11.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 477
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/02.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 478
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/03.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 479
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/13.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 480
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/14.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 481
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/15.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 482
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/17.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 483
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/18.jpg"), "html", null, true);
+        echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
+                            <li><a href=\"#\"><img width=\"155\" height=\"155\" src=\"";
+        // line 484
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/slide/19.jpg"), "html", null, true);
         echo "\" class=\"attachment-post-thumbnail wp-post-image\" alt=\"\"></a></li>
 
@@ -1367,18 +1409,18 @@ if (this.value===\"Financial\"){
                          ";
     }
 
-    // line 523
+    // line 550
     public function block_UserProjects($context, array $blocks = array())
     {
-        // line 524
+        // line 551
         echo "
 ";
     }
 
-    // line 556
+    // line 583
     public function block_CreateProject($context, array $blocks = array())
     {
-        // line 557
+        // line 584
         echo "
 ";
     }
@@ -1395,7 +1437,7 @@ if (this.value===\"Financial\"){
 
     public function getDebugInfo()
     {
-        return array (  1382 => 557,  1379 => 556,  1374 => 524,  1371 => 523,  1362 => 457,  1358 => 456,  1354 => 455,  1350 => 454,  1346 => 453,  1342 => 452,  1338 => 451,  1334 => 450,  1330 => 449,  1326 => 448,  1322 => 447,  1318 => 446,  1314 => 445,  1307 => 441,  1303 => 440,  1299 => 439,  1295 => 438,  1291 => 437,  1287 => 436,  1283 => 435,  1279 => 434,  1275 => 433,  1271 => 432,  1267 => 431,  1263 => 430,  1259 => 429,  1253 => 426,  1249 => 425,  1245 => 424,  1241 => 423,  1237 => 422,  1233 => 421,  1229 => 420,  1225 => 419,  1221 => 418,  1217 => 417,  1213 => 416,  1209 => 415,  1205 => 414,  1193 => 404,  1190 => 403,  1118 => 967,  1114 => 966,  1110 => 965,  1106 => 964,  1102 => 963,  1098 => 962,  1094 => 961,  1090 => 960,  1086 => 959,  1082 => 958,  847 => 726,  843 => 725,  839 => 724,  835 => 723,  831 => 722,  827 => 721,  775 => 672,  763 => 663,  743 => 646,  739 => 645,  735 => 644,  731 => 643,  727 => 642,  723 => 641,  719 => 640,  677 => 601,  668 => 595,  659 => 589,  626 => 558,  624 => 556,  591 => 525,  589 => 523,  565 => 502,  557 => 497,  550 => 493,  543 => 489,  536 => 485,  529 => 481,  508 => 462,  506 => 403,  454 => 354,  448 => 353,  411 => 319,  405 => 318,  368 => 284,  362 => 283,  323 => 247,  317 => 246,  279 => 211,  272 => 209,  238 => 178,  166 => 109,  162 => 108,  158 => 107,  154 => 106,  150 => 105,  146 => 104,  98 => 59,  63 => 27,  59 => 26,  55 => 25,  50 => 23,  44 => 20,  25 => 3,  22 => 1,);
+        return array (  1424 => 584,  1421 => 583,  1416 => 551,  1413 => 550,  1404 => 484,  1400 => 483,  1396 => 482,  1392 => 481,  1388 => 480,  1384 => 479,  1380 => 478,  1376 => 477,  1372 => 476,  1368 => 475,  1364 => 474,  1360 => 473,  1356 => 472,  1349 => 468,  1345 => 467,  1341 => 466,  1337 => 465,  1333 => 464,  1329 => 463,  1325 => 462,  1321 => 461,  1317 => 460,  1313 => 459,  1309 => 458,  1305 => 457,  1301 => 456,  1295 => 453,  1291 => 452,  1287 => 451,  1283 => 450,  1279 => 449,  1275 => 448,  1271 => 447,  1267 => 446,  1263 => 445,  1259 => 444,  1255 => 443,  1251 => 442,  1247 => 441,  1235 => 431,  1232 => 430,  1160 => 994,  1156 => 993,  1152 => 992,  1148 => 991,  1144 => 990,  1140 => 989,  1136 => 988,  1132 => 987,  1128 => 986,  1124 => 985,  889 => 753,  885 => 752,  881 => 751,  877 => 750,  873 => 749,  869 => 748,  817 => 699,  805 => 690,  785 => 673,  781 => 672,  777 => 671,  773 => 670,  769 => 669,  765 => 668,  761 => 667,  719 => 628,  710 => 622,  701 => 616,  668 => 585,  666 => 583,  633 => 552,  631 => 550,  607 => 529,  599 => 524,  592 => 520,  585 => 516,  578 => 512,  571 => 508,  550 => 489,  548 => 430,  496 => 381,  490 => 380,  453 => 346,  447 => 345,  410 => 311,  404 => 310,  365 => 274,  359 => 273,  321 => 238,  314 => 236,  280 => 205,  208 => 136,  204 => 135,  200 => 134,  196 => 133,  192 => 132,  188 => 131,  154 => 100,  147 => 96,  143 => 95,  139 => 94,  125 => 83,  100 => 61,  65 => 29,  61 => 28,  57 => 27,  52 => 25,  46 => 22,  25 => 3,  22 => 1,);
     }
 }
 /* */
@@ -1412,11 +1454,13 @@ if (this.value===\"Financial\"){
 /*     <meta name="viewport" content="width=device-width, initial-scale=1.0">*/
 /*     <meta name="author" content="">*/
 /* */
+/* */
+/* <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">*/
+/*   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>*/
+/*   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*/
 /*     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>*/
 /*     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>*/
 /*     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,200,300' rel='stylesheet' type='text/css'>*/
-/*     */
-/*    */
 /*         <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">*/
 /*     */
 /*   */
@@ -1474,6 +1518,31 @@ if (this.value===\"Financial\"){
 /* </head>*/
 /* */
 /* <body>*/
+/*     */
+/* <nav class="navbar navbar-inverse" >*/
+/*   <div class="container-fluid">*/
+/*     <div class="navbar-header">*/
+/*       <!--  <a class="navbar-brand" style="color: #d6e9c6; font-family: monospace" href="#">{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}</a>-->*/
+/*     </div>*/
+/*     <ul class="nav navbar-nav" >*/
+/*      */
+/*      <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>*/
+/*         <ul class="dropdown-menu">*/
+/*           <li><a style="color:#9be11f" href="#">Page 1-1</a></li>*/
+/*           <li><a style="color:#9be11f" href="#">Page 1-2</a></li>*/
+/*           <li><a style="color:#9be11f" href="#">Page 1-3</a></li>*/
+/*         </ul>*/
+/*       </li>-->*/
+/*       <li><a style="color:#9be11f" href="{{ path('fos_user_profile_show') }}">Profile</a></li>*/
+/*       <li><a style="color:#9be11f"   href="{{ path('fos_user_profile_edit') }}">Edit Profile</a></li>*/
+/*         <li><a style="color:#9be11f"   href="{{ path('user_user_searching')}}">Search For Users</a></li>*/
+/*     </ul>*/
+/*     <ul class="nav navbar-nav navbar-right">*/
+/*       <li><a style="color:#9be11f" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>*/
+/*       <li><a style="color:#9be11f" href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>*/
+/*     </ul>*/
+/*   </div>*/
+/* </nav>*/
 /*     */
 /* <div id="header" class="header">*/
 /*     <a name="id_home"></a>*/

@@ -155,11 +155,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // index
-        if ($pathinfo === '/index') {
-            return array (  '_controller' => 'TimeToStart\\ProjectBundle\\Controller\\ProjectController::indexAction',  '_route' => 'index',);
-        }
-
         // user_user_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_user_homepage')), array (  '_controller' => 'User\\UserBundle\\Controller\\UserController::indexAction',));
@@ -290,8 +285,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // User_homepagingfeedadd
-        if ($pathinfo === '/ad') {
+        if ($pathinfo === '/adfeedback') {
             return array (  '_controller' => 'User\\UserBundle\\Controller\\feedbackController::addAction',  '_route' => 'User_homepagingfeedadd',);
+        }
+
+        // index
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'TimeToStart\\ProjectBundle\\Controller\\ProjectController::indexAction',  '_route' => 'index',);
         }
 
         // homepage

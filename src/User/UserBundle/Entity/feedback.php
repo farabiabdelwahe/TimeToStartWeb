@@ -52,6 +52,8 @@ private $idproject;
 * 
 */
 private $ban=0;
+
+private $owner ;
 function getIdfeedback() {
     return $this->idfeedback;
 }
@@ -98,6 +100,14 @@ function setIdproject($idproject) {
 
 function setBan($ban) {
     $this->ban = $ban;
+}
+
+function getOwner() {
+    return $this->owner;
+}
+
+function setOwner($owner) {
+    $this->owner = $owner;
 }
 
 

@@ -158,11 +158,18 @@ $user = $this->get('security.token_storage')->getToken()->getUser();
           $id=$req->get('id');
           $em= $this->getDoctrine()->getManager()   ;
           $Project=$em->getRepository("TimeToStartProjectBundle:Project")->find($id);
+                             $Feeds=$em->getRepository("UserUserBundle:feedback")->findBy(
+    array('idproject' =>$id));
                                $V=$em->getRepository("UserUserBundle:User")->findOneBy(
     array('id' =>$Project->getIduser()));
+                               foreach ($Feeds as &$value) {
+                                   $o=$em->getRepository("UserUserBundle:User")->find( $value->getIduser());
+                                  $value->setOwner($o->getUsername());
+   
+}
 
   
-        return $this->render('TimeToStartProjectBundle:Project:ProjectLayout.html.twig', array("m"=>$Project,"V"=>$V->getUsername()));
+        return $this->render('TimeToStartProjectBundle:Project:ProjectLayout.html.twig', array("m"=>$Project,"V"=>$V->getUsername(),"f"=>$Feeds));
         
        
     //put your code here

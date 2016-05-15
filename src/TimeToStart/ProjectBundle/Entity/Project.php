@@ -274,4 +274,9 @@ class Project
     {
         $this->taskdate = new \DateTime();
     }
+    
+      public function getuser()
+    {
+        return $this->User;
+    }
 }

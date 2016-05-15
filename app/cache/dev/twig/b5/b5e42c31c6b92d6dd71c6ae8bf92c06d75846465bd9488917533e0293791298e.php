@@ -218,11 +218,12 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
                             <div class=\"back_this_project_button\">
         <button class=\"btn btn-large back_project\" type=\"submit\">
             <small>Download Project File</small>
-            
+       
                 </div>
                             
                             
                 </div>
+                                 </form>
 
 
                 
@@ -379,7 +380,7 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 
 <div id=\"social_uncategorized\">
     <div class=\"left_social_uncategorized\"><span>";
-        // line 319
+        // line 320
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : $this->getContext($context, "m")), "type", array()), "html", null, true);
         echo "</span></div>
     <div class=\"social inline fright\">
@@ -401,7 +402,7 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
     
         <div class=\"right_face_social_text span8\">
             <div class=\"name_surname\">";
-        // line 338
+        // line 339
         echo twig_escape_filter($this->env, (isset($context["V"]) ? $context["V"] : $this->getContext($context, "V")), "html", null, true);
         echo "</div>
           
@@ -414,38 +415,104 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 </div>
 
  <div class=\"social inline fright\"> ";
-        // line 348
+        // line 349
         echo $this->env->getExtension('nomaya_social_bar')->getSocialButtons();
         echo "</div>
  
  <br>
  <br>
-<h4 class=\"decoration text-center\"><span class=\"nobacgr\">Ask a Question</span></h4>
+<h4 class=\"decoration text-center\"><span class=\"nobacgr\">Feedbacks</span></h4>
 <div id=\"asc_a_question\">
     <div class=\"fb-comments\" data-href=\"";
-        // line 354
+        // line 355
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "uri", array()), "html", null, true);
         echo "\"> </div>
 </div>
+
+
+<div id=\"asc_a_question\">
+         ";
+        // line 360
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")));
+        foreach ($context['_seq'] as $context["_key"] => $context["fi"]) {
+            // line 361
+            echo "
+    <div class=\"reply_user main_reply\">
+        <div class=\"row-fluid\">
+             ";
+            // line 364
+            if (($this->getAttribute($context["fi"], "iduser", array()) == $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "id", array()))) {
+                // line 365
+                echo "            <div class=\"span10\">
+          
+   <div class=\"name_and_date\">";
+                // line 367
+                echo twig_escape_filter($this->env, $this->getAttribute($context["fi"], "text", array()), "html", null, true);
+                echo "<span class=\"user_name\">  User: ";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["fi"], "owner", array()), "html", null, true);
+                echo " </span> - ";
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["fi"], "date", array()), "Y-m-d"), "html", null, true);
+                echo " - <a href=\"#\">Edit</a></div>
+               
+
+ ";
+            } else {
+                // line 371
+                echo "        <div class=\"name_and_date\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["fi"], "text", array()), "html", null, true);
+                echo "<span class=\"user_name\">  User: ";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["fi"], "owner", array()), "html", null, true);
+                echo " </span> - ";
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["fi"], "date", array()), "Y-m-d"), "html", null, true);
+                echo "
+
+ 
+";
+            }
+            // line 375
+            echo "
+             
+
+            </div>
+        </div>
+    </div>
+
+ ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fi'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 383
+        echo "</div>
+<form action =";
+        // line 384
+        echo $this->env->getExtension('routing')->getPath("User_homepagingfeedadd");
+        echo " method=\"POST\">
 <div id=\"asc_a_question_form\">
-    <h3 class=\"text-center asc_question_form_name\">Ask a <span class=\"h3_quest\">Question</span></h3>
+    <h3 class=\"text-center asc_question_form_name\">Post <span class=\"h3_quest\">A Feedback </span></h3>
  
     <div class=\"form_question\">
         <div class=\"row-fluid\">
             <div class=\"controls controls-row message\">
-                <input class=\"inputp search-query span4\" type=\"text\" placeholder=\"Name*\">
-                <input class=\"inputp search-query span4\" type=\"text\" placeholder=\"Email*\">
-                <input class=\"inputp search-query span4\" type=\"text\" placeholder=\"Website*\">
+
                 <div class=\"clear\"></div>
-                <textarea id=\"redex\" class=\"inputp search-query span12\"  rows=\"5\" placeholder=\"Project description\"></textarea>
+                <textarea id=\"redex\" class=\"inputp search-query span12\"  rows=\"5\" placeholder=\"Project description\" name=\"text\"></textarea>
+                 <input type=\"hidden\" name=\"idproject\" value=\"";
+        // line 394
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : $this->getContext($context, "m")), "idproject", array()), "html", null, true);
+        echo "\">
+    
+                
                 <div class=\"clear\"></div>
                 <div class=\"tmargin20\">
-                    <button type=\"submit\" class=\"btn\"><strong>Send Message</strong></button>
+                    <button type=\"submit\" class=\"btn\"><strong>Post</strong></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</form>
 </div>
 <div class=\"sidebar_descr span4\">
     <div id=\"back_this_project_block\">
@@ -463,7 +530,7 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
                 <div class=\"span1\" style=\"margin-right: 10px\"><div class=\"image_second\"></div></div>
                 <div class=\"text_backers_days_blocks span10\">
                     <div class=\"top_text_backers_days_blocks\">";
-        // line 391
+        // line 422
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : $this->getContext($context, "m")), "target", array()), "html", null, true);
         echo "</div>
                     <div class=\"bottom_text_backers_days_blocks\">Project Target</div>
@@ -475,7 +542,7 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
                 <div class=\"span1\" style=\"margin-right: 10px\"><div class=\"image_third\"></div></div>
                 <div class=\"text_backers_days_blocks span10\">
                     <div class=\"top_text_backers_days_blocks\">";
-        // line 400
+        // line 431
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : $this->getContext($context, "m")), "datecreation", array()), "Y-m-d"), "html", null, true);
         echo "</div>
                     <div class=\"bottom_text_backers_days_blocks\">Creation Date</div>
@@ -665,43 +732,43 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 </div>
 
 <script src= \"";
-        // line 587
+        // line 618
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.selectbox.min.js"), "html", null, true);
         echo "\"></script>
 <script src= \"";
-        // line 588
+        // line 619
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 589
+        // line 620
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 590
+        // line 621
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery-uii.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 591
+        // line 622
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/contact.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 592
+        // line 623
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.colorbox.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 593
+        // line 624
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.placeholder.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 594
+        // line 625
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.tweet.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 595
+        // line 626
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jflickrfeed.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 596
+        // line 627
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/scripts.js"), "html", null, true);
         echo "\"></script>
 <script>
@@ -889,7 +956,7 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 
     public function getDebugInfo()
     {
-        return array (  705 => 596,  701 => 595,  697 => 594,  693 => 593,  689 => 592,  685 => 591,  681 => 590,  677 => 589,  673 => 588,  669 => 587,  479 => 400,  467 => 391,  427 => 354,  418 => 348,  405 => 338,  383 => 319,  216 => 155,  212 => 154,  186 => 131,  175 => 123,  148 => 99,  144 => 98,  140 => 97,  136 => 96,  132 => 95,  128 => 94,  54 => 23,  50 => 22,  46 => 21,  41 => 19,  35 => 16,  19 => 2,);
+        return array (  772 => 627,  768 => 626,  764 => 625,  760 => 624,  756 => 623,  752 => 622,  748 => 621,  744 => 620,  740 => 619,  736 => 618,  546 => 431,  534 => 422,  503 => 394,  490 => 384,  487 => 383,  474 => 375,  462 => 371,  451 => 367,  447 => 365,  445 => 364,  440 => 361,  436 => 360,  428 => 355,  419 => 349,  406 => 339,  384 => 320,  216 => 155,  212 => 154,  186 => 131,  175 => 123,  148 => 99,  144 => 98,  140 => 97,  136 => 96,  132 => 95,  128 => 94,  54 => 23,  50 => 22,  46 => 21,  41 => 19,  35 => 16,  19 => 2,);
     }
 }
 /* {# empty Twig template #}*/
@@ -1050,11 +1117,12 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 /*                             <div class="back_this_project_button">*/
 /*         <button class="btn btn-large back_project" type="submit">*/
 /*             <small>Download Project File</small>*/
-/*             */
+/*        */
 /*                 </div>*/
 /*                             */
 /*                             */
 /*                 </div>*/
+/*                                  </form>*/
 /* */
 /* */
 /*                 */
@@ -1243,29 +1311,59 @@ class __TwigTemplate_e20ca058ab8bfb9f8ae8890440feb625c8ec9576c83587352a70523843f
 /*  */
 /*  <br>*/
 /*  <br>*/
-/* <h4 class="decoration text-center"><span class="nobacgr">Ask a Question</span></h4>*/
+/* <h4 class="decoration text-center"><span class="nobacgr">Feedbacks</span></h4>*/
 /* <div id="asc_a_question">*/
 /*     <div class="fb-comments" data-href="{{app.request.uri}}"> </div>*/
 /* </div>*/
+/* */
+/* */
+/* <div id="asc_a_question">*/
+/*          {% for fi in f %}*/
+/* */
+/*     <div class="reply_user main_reply">*/
+/*         <div class="row-fluid">*/
+/*              {% if  fi.iduser == app.user.id %}*/
+/*             <div class="span10">*/
+/*           */
+/*    <div class="name_and_date">{{ fi.text }}<span class="user_name">  User: {{ fi.owner }} </span> - {{ fi.date|date('Y-m-d') }} - <a href="#">Edit</a></div>*/
+/*                */
+/* */
+/*  {% else %}*/
+/*         <div class="name_and_date">{{ fi.text }}<span class="user_name">  User: {{ fi.owner }} </span> - {{ fi.date|date('Y-m-d') }}*/
+/* */
+/*  */
+/* {% endif %}*/
+/* */
+/*              */
+/* */
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/* */
+/*  {% endfor %}*/
+/* </div>*/
+/* <form action ={{ path('User_homepagingfeedadd') }} method="POST">*/
 /* <div id="asc_a_question_form">*/
-/*     <h3 class="text-center asc_question_form_name">Ask a <span class="h3_quest">Question</span></h3>*/
+/*     <h3 class="text-center asc_question_form_name">Post <span class="h3_quest">A Feedback </span></h3>*/
 /*  */
 /*     <div class="form_question">*/
 /*         <div class="row-fluid">*/
 /*             <div class="controls controls-row message">*/
-/*                 <input class="inputp search-query span4" type="text" placeholder="Name*">*/
-/*                 <input class="inputp search-query span4" type="text" placeholder="Email*">*/
-/*                 <input class="inputp search-query span4" type="text" placeholder="Website*">*/
+/* */
 /*                 <div class="clear"></div>*/
-/*                 <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description"></textarea>*/
+/*                 <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description" name="text"></textarea>*/
+/*                  <input type="hidden" name="idproject" value="{{ m.idproject }}">*/
+/*     */
+/*                 */
 /*                 <div class="clear"></div>*/
 /*                 <div class="tmargin20">*/
-/*                     <button type="submit" class="btn"><strong>Send Message</strong></button>*/
+/*                     <button type="submit" class="btn"><strong>Post</strong></button>*/
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/
 /*     </div>*/
 /* </div>*/
+/* </form>*/
 /* </div>*/
 /* <div class="sidebar_descr span4">*/
 /*     <div id="back_this_project_block">*/

@@ -2,42 +2,44 @@
 
 namespace User\UserBundle\Controller;
 
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use User\UserBundle\Entity\feedback;
 use User\UserBundle\Form\feedForm;
-use User\UserBundle\Form\feednoForm;
-use FOS\UserBundle\Model\UserInterface;
-use FOS\UserBundle\Model\User;
-use FOS\UserBundle\FOSUserEvents;
-use FOS\UserBundle\Event\GetResponseUserEvent;
-use FOS\UserBundle;
+
 class feedbackController extends Controller{
     
     
       public function addAction()
       {
+             $req=$this->get('request');
+       
+          if ($req->getMethod()=="POST")
+          {
+          
           $user = $this->get('security.token_storage')->getToken()->getUser();
          $feed = new feedback();
-         $feed->setIduser($user->getId());
-         
-          $feedType = new feednoForm();
-          $form = $this ->createForm($feedType, $feed);
+    $feed->setIduser($user->getId());
+      $req= $this->get('request');;  
+    
           
-          $req= $this->get('request');
-          $form -> handleRequest($req);
+             $feed->setText(   $s=$req->get("text"))  ;  
+            $feed->setIdproject(   $s=$req->get("idproject"))  ;  
+    
+       
           
-          if ($form->isValid())
-          {
+               $time = new DateTime();
+           $feed->setDate($time);
+    
             
                 $em = $this->getDoctrine()->getManager();
 //          return new \Symfony\Component\HttpFoundation\Response (     var_dump($feed));
               $em ->persist($feed);
               $em->flush();
-              return $this->redirectToRoute("User_homepagingfeed");
+      return $this->redirect($this->generateUrl('index', array('id' => $req->get("idproject"))));
                       
-          }    
-         
-          return $this ->render("UserUserBundle:feedback:add.html.twig", array('f'=>$form->createView()));
+          }   
+   
       }
       
       

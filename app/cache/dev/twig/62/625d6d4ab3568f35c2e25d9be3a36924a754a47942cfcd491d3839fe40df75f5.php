@@ -324,7 +324,7 @@ class __TwigTemplate_7ff5a161ed5510dff6bfe37046c39156a013601bae1bfa8c560662d9cc3
                         </div>
                         <p class=\"descr\">  ";
             // line 230
-            echo twig_escape_filter($this->env, (((twig_length_filter($this->env, $this->getAttribute($context["m"], "description", array())) > 200)) ? ((twig_slice($this->env, $this->getAttribute($context["m"], "description", array()), 0, 200) . "...")) : ($this->getAttribute($context["m"], "description", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, (((twig_length_filter($this->env, $this->getAttribute($context["m"], "description", array())) > 20)) ? ((twig_slice($this->env, $this->getAttribute($context["m"], "description", array()), 0, 20) . "...")) : ($this->getAttribute($context["m"], "description", array()))), "html", null, true);
             echo "</p>
                         <div class=\"folder price topbordered\">
                             <div class=\"span4\">
@@ -1208,7 +1208,7 @@ if (this.value===\"Financial\"){
 /*                         <div class="folder lorem lines">*/
 /*                             <div id="project" value="132" class="slider"></div>*/
 /*                         </div>*/
-/*                         <p class="descr">  {{ m.description|length > 200 ? m.description|slice(0, 200) ~ '...' : m.description}}</p>*/
+/*                         <p class="descr">  {{ m.description|length > 20 ? m.description|slice(0, 20) ~ '...' : m.description}}</p>*/
 /*                         <div class="folder price topbordered">*/
 /*                             <div class="span4">*/
 /*                                 <strong class="green"><span>$</span><span class="project_value" href="#project8">{{ m.target}}</span></strong>*/

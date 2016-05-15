@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/wamp/www/TST3/src/User/UserBundle/Entity/User.php</file>
+            <file>file:/C:/wamp/www/TST3/src/AppBundle/AppBundle.php</file>
+            <file>file:/C:/wamp/www/TST3/src/TimeToStart/ProjectBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp/www/TST3/src/TimeToStart/ProjectBundle/Entity/Project.php</file>
+            <file>file:/C:/wamp/www/TST3/src/TimeToStart/ProjectBundle/Controller/ProjectController.php</file>
+            <file>file:/C:/wamp/www/TST3/src/TimeToStart/ProjectBundle/Resources/views/Project/Project.html.twig</file>
+            <file>file:/C:/wamp/www/TST3/src/TimeToStart/ProjectBundle/Resources/views/Project/ProjectLayout.html.twig</file>
+        </group>
     </open-files>
 </project-private>

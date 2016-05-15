@@ -156,11 +156,12 @@
                             <div class="back_this_project_button">
         <button class="btn btn-large back_project" type="submit">
             <small>Download Project File</small>
-            
+       
                 </div>
                             
                             
                 </div>
+                                 </form>
 
 
                 
@@ -349,29 +350,59 @@
  
  <br>
  <br>
-<h4 class="decoration text-center"><span class="nobacgr">Ask a Question</span></h4>
+<h4 class="decoration text-center"><span class="nobacgr">Feedbacks</span></h4>
 <div id="asc_a_question">
     <div class="fb-comments" data-href="{{app.request.uri}}"> </div>
 </div>
+
+
+<div id="asc_a_question">
+         {% for fi in f %}
+
+    <div class="reply_user main_reply">
+        <div class="row-fluid">
+             {% if  fi.iduser == app.user.id %}
+            <div class="span10">
+          
+   <div class="name_and_date">{{ fi.text }}<span class="user_name">  User: {{ fi.owner }} </span> - {{ fi.date|date('Y-m-d') }} - <a href="#">Edit</a></div>
+               
+
+ {% else %}
+        <div class="name_and_date">{{ fi.text }}<span class="user_name">  User: {{ fi.owner }} </span> - {{ fi.date|date('Y-m-d') }}
+
+ 
+{% endif %}
+
+             
+
+            </div>
+        </div>
+    </div>
+
+ {% endfor %}
+</div>
+<form action ={{ path('User_homepagingfeedadd') }} method="POST">
 <div id="asc_a_question_form">
-    <h3 class="text-center asc_question_form_name">Ask a <span class="h3_quest">Question</span></h3>
+    <h3 class="text-center asc_question_form_name">Post <span class="h3_quest">A Feedback </span></h3>
  
     <div class="form_question">
         <div class="row-fluid">
             <div class="controls controls-row message">
-                <input class="inputp search-query span4" type="text" placeholder="Name*">
-                <input class="inputp search-query span4" type="text" placeholder="Email*">
-                <input class="inputp search-query span4" type="text" placeholder="Website*">
+
                 <div class="clear"></div>
-                <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description"></textarea>
+                <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description" name="text"></textarea>
+                 <input type="hidden" name="idproject" value="{{ m.idproject }}">
+    
+                
                 <div class="clear"></div>
                 <div class="tmargin20">
-                    <button type="submit" class="btn"><strong>Send Message</strong></button>
+                    <button type="submit" class="btn"><strong>Post</strong></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</form>
 </div>
 <div class="sidebar_descr span4">
     <div id="back_this_project_block">
